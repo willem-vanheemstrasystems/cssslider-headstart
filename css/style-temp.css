@@ -30,7 +30,7 @@ body {
   box-sizing: content-box;
 }
 .csslider1 > .cs_anchor {
-  /* TEMP COMMENTED OUT display: none; */
+  display: none;
 }
 .csslider1 > ul {
   position: relative;
@@ -39,7 +39,7 @@ body {
   /* TEMP COMMENTED OUT line-height: 0; */
   /* TEMP COMMENTED OUT margin: 0 auto; */
   /* TEMP COMMENTED OUT padding: 0; */
-  /* TEMP COMMENTED OUT height: 768px; */
+  height: 768px;
   /* TEMP COMMENTED OUT overflow: hidden; */
   /* TEMP COMMENTED OUT white-space: nowrap; */
 }
@@ -241,3 +241,28 @@ body {
   transform: scale(1);
 }
 /* ------------- /Effect ------------- */
+/* ------------- Template Show on hover ------------- */
+/* ------------- /Template Show on hover ------------- */
+/* ------------- Template Arrows ------------- */
+/* ------------- /Template Arrows ------------- */
+/* ------------- Template Bullets ------------- */
+.csslider1 > .cs_bullets {
+  bottom: 5px;
+  margin-bottom: 5px;
+}
+.csslider1 > .cs_bullets > label {
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 9px;
+  background: #CBECFD;
+}
+.csslider1 > .cs_bullets > label > .cs_point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 2px;
+}
