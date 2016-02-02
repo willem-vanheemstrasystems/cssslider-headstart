@@ -35,13 +35,13 @@ body {
 .csslider1 > ul {
   position: relative;
   z-index: 1;
-  /* TEMP COMMENTED OUT font-size: 0; */
-  /* TEMP COMMENTED OUT line-height: 0; */
-  /* TEMP COMMENTED OUT margin: 0 auto; */
-  /* TEMP COMMENTED OUT padding: 0; */
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
   height: 768px;
-  /* TEMP COMMENTED OUT overflow: hidden; */
-  /* TEMP COMMENTED OUT white-space: nowrap; */
+  overflow: hidden;
+  white-space: nowrap;
 }
 .csslider1 > ul > .cs_skeleton {
   width: 100%;
