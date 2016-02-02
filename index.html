@@ -4,9 +4,9 @@
   <title>CSS Slider</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/style.css">
-  <!--[if IE]><link rel="stylesheet" href="./css/ie.css"><![endif]-->
-  <!--[if lte IE 9]><script type="text/javascript" src="./js/ie.js"></script><![endif]-->
+  <!--[if IE]><link rel="stylesheet" href="./css/ie-slider.css"><![endif]-->
+  <!--[if lte IE 9]><script type="text/javascript" src="./js/ie-slider.js"></script><![endif]-->
+  <script type="text/javascript" src="js/head.min.js"></script>
 </head>
 <body>
   <section id="container">
@@ -117,7 +117,23 @@
     <h1>Control Center</h1>
   </section><!--eof controlcenter-->
   <footer>
+    <button onclick="slideControlCenter(true)">Up</button>
+    <button onclick="slideControlCenter(false)">Down</button>
   </footer>
-  <script type="text/javascript" src="./js/gestures.js"></script>
+  <script type="text/javascript">
+    console.log('inside js/head');
+    head.ready(document, function() {
+      console.log('inside head.ready');
+      head.test(
+        (head.browser.ie && head.browser.version === 8),
+        ["js/main.js", "js/gestures.js"], // we could ask for an ie8 specific file here
+        ["js/main.js", "js/gestures.js"],
+        function() {
+          // run callback
+          head.load("css/main.css","css/slider.css");
+        }
+      );
+    });
+  </script>
 </body>
 </html>

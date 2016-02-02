@@ -1,0 +1,132 @@
+/*
+ * main.css
+ */
+body {
+  font-family: "helvetica", san-serif;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: .9em;
+  -webkit-perspective: 1100;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  position: absolute;
+  background: transparent;
+  overflow: hidden;
+  /*-webkit-transform: rotateY(0);
+  -webkit-transform-style: flat;*/
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+main {
+  /*background-image: url('girls.jpg'); */
+  /*background-image: url('images/wds12.jpg'); */
+  /*background-image: url('../images/fish.jpg');*/
+  background-image: url('../images/NSTexturedFullScreenBackgroundColor.png');
+  position: absolute;
+  /*background-size: 120%;*/
+  background-repeat: no-repeat;
+  /*-webkit-perspective: 200;*/
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-origin: content-box;
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .4);
+  /*-webkit-transition: background-position 100ms;*/
+  /*-webkit-transform-style: flat;
+  /*background-position: 50% 50%; */
+}
+
+.homescreen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+  opacity: .95;
+  /*background-image: url('../images/fish.jpg');*/
+  background-image: url('../images/NSTexturedFullScreenBackgroundColor.png');
+  /*background-repeat: no-repeat;*/ 
+  background-repeat: repeat;
+}
+
+.homescreen figure {
+  width: 64px;
+  text-align: center;
+  float: left;
+  margin: 20px;
+  text-shadow: 0 1px 0 #555;
+}
+
+img {
+}
+
+footer {
+  position: fixed;
+  color: #000; 
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .3);
+  padding: 0 2%;
+  width: 96%;
+  margin: 0;
+  z-index: 8
+}
+
+select {
+  font-size: 1.2em;
+}
+
+input {
+  width: 15%
+}
+
+header {
+  color: #00001f;
+}
+
+.homescreen img {
+  width: 100%;
+  -moz-border-radius: 6px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, .6);
+}
+
+/*effects*/
+
+#controlcenter {
+  width: 100%;
+  height: 80%;
+  top: 20%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, .7);
+  z-index: 3;
+  -webkit-transition: top 1s;
+}
+
+h1 {
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size: 3em;
+  text-align: center
+}
+
+#homescreen2 {
+  -webkit-filter: blur(10px);
+  overflow: hidden;
+  z-index: 1
+} 
+
+#homescreen1 {
+  height: 20%;
+  z-index: 2;
+  overflow: hidden;
+  -webkit-transition: height 1s
+}
