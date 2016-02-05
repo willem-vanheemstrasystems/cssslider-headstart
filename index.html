@@ -23,7 +23,32 @@
             <p>this slide is never shown</p>
           </li>
           <li class='num0 img slide'>
-            <p>This will be our Search slide</p>    
+            <p>This will be our Search slide</p>
+            <div id="apps">
+		      <input class="search" placeholder="Search" />
+		      <button class="sort" data-sort="name">
+		        Sort by name
+		      </button>
+		      <ul class="list">
+		        <li>
+		          <h3 class="name">Jonny Stromberg</h3>
+		          <p class="born">1986</p>
+		        </li>
+		        <li>
+		          <h3 class="name">Jonas Arnklint</h3>
+		          <p class="born">1985</p>
+		        </li>
+		        <li>
+		          <h3 class="name">Martina Elm</h3>
+		          <p class="born">1986</p>
+		        </li>
+		        <li>
+		          <h3 class="name">Gustaf Lindqvist</h3>
+		          <p class="born">1983</p>
+		        </li>
+		      </ul>
+		    </div>
+            <!--img class='fullwidth' src='images/transparent.png' /-->    
           </li>
           <li class='num1 img slide'>
             <figure id="app1">
@@ -366,11 +391,11 @@
       console.log('inside head.ready');
       head.test(
         (head.browser.ie && head.browser.version === 8),
-        ["js/main.js", "js/gestures.js"], // we could ask for an ie8 specific file here
-        ["js/main.js", "js/gestures.js"],
+        ["js/main.js", "js/gestures.js", "js/list.min.js"], // we could ask for an ie8 specific file here
+        ["js/main.js", "js/list.min.js"], // TEMP REMOVED "js/gestures.js"
         function() {
           // run callback
-          head.load("css/main.css","css/slider.css");
+          head.load("css/main.css","css/slider.css","css/list.css");
           // lower control center
           slideControlCenter(false);
         }

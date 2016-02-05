@@ -52,7 +52,7 @@ body {
   line-height: 0;
 }
 .csslider1 > ul > .slide.img img {
-  /* TEMP COMMENTED OUT width: 100%; */
+  width: 100%;
 }
 .csslider1 > ul > .slide.img a {
   font-size: 0pt;
