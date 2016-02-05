@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Slider - Drag</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if IE]><link rel="stylesheet" href="./css/ie-slider.css"><![endif]-->
+    <!--[if lte IE 9]><script type="text/javascript" src="./js/ie-slider.js"></script><![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/head.min.js"></script>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider-control left inactive"></div>
+      <div class="slider-control right"></div>
+      <ul class="slider-pagi"></ul>
+      <div class="slider">
+        <div class="slide slide-0 active">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+            <div class="slide__text">
+              <h2 class="slide__text-heading">Project name 1</h2>
+              <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+              <a class="slide__text-link">Project link</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-1 ">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+            <div class="slide__text">
+              <h2 class="slide__text-heading">Project name 2</h2>
+              <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+              <a class="slide__text-link">Project link</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+            <div class="slide__text">
+              <h2 class="slide__text-heading">Project name 3</h2>
+              <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+              <a class="slide__text-link">Project link</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="slide__bg"></div>
+          <div class="slide__content">
+            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+            </svg>
+            <div class="slide__text">
+              <h2 class="slide__text-heading">Project name 4</h2>
+              <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+              <a class="slide__text-link">Project link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+    </footer>
+    <script type="text/javascript">
+      console.log('inside js/head');
+      head.ready(document, function() {
+        console.log('inside head.ready');
+        head.test(
+          (head.browser.ie && head.browser.version === 8),
+          ["js/slider-drag.js", "js/list.min.js"], // we could ask for an ie8 specific file here
+          ["js/slider-drag.js", "js/list.min.js"], // TEMP REMOVED "js/main.js", and "js/gestures.js" as we don't need it
+          function() {
+            // run callback
+            head.load("css/main.css","css/slider-drag.css","css/list.css");
+            // lower control center
+            // TEMP COMMENTED OUT slideControlCenter(false);
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
