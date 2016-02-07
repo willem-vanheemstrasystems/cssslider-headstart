@@ -1,7 +1,8 @@
-@font-face {
+
+/* @font-face { NO LONGER REQUIRED
   src: url("../fonts/polar.otf");
   font-family: 'Polar';
-}
+} */
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
@@ -19,11 +20,11 @@ body {
   background-image: url('../images/NSTexturedFullScreenBackgroundColor.png'); /* NEW */
 }
 
-svg {
+/* svg { NO LONGER REQUIRED
   display: block;
   overflow: visible;
 }
-
+*/
 .slider-container {
   position: relative;
   height: 100%;
@@ -111,6 +112,7 @@ svg {
   height: 100%;
 }
 .slider.animating {
+  /* This is what makes the slides slide in and out horizontally */
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -118,6 +120,7 @@ svg {
   will-change: transform;
 }
 .slider.animating .slide__bg {
+  /* This is what makes the slides's background slide in and out horizontally */
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -158,9 +161,11 @@ svg {
   fill: #e99c7e;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE  
   .slide:nth-child(1) .slide__text {
     background-color: rgba(233, 156, 126, 0.8);
   }
+  */
 }
 .slide:nth-child(2) {
   left: 100%;
@@ -173,9 +178,11 @@ svg {
   fill: #e1ccae;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE
   .slide:nth-child(2) .slide__text {
     background-color: rgba(225, 204, 174, 0.8);
   }
+  */
 }
 .slide:nth-child(3) {
   left: 200%;
@@ -188,9 +195,11 @@ svg {
   fill: #adc5cd;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE  
   .slide:nth-child(3) .slide__text {
     background-color: rgba(173, 197, 205, 0.8);
   }
+  */
 }
 .slide:nth-child(4) {
   left: 300%;
@@ -203,9 +212,11 @@ svg {
   fill: #cbc6c3;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE  
   .slide:nth-child(4) .slide__text {
     background-color: rgba(203, 198, 195, 0.8);
   }
+  */
 }
 .slide__content {
   position: absolute;
@@ -220,6 +231,7 @@ svg {
   left: 0;
   height: 100%;
   min-height: 810px;
+  /* TEMP COMMENTED OUT: THIS IS THE PART THAT ANIMATED THE TEXT COMING IN, WHICH WE DON'T WANT
   -webkit-transition: opacity 0.2s 0.5s, -webkit-transform 0.5s 0.5s;
   transition: opacity 0.2s 0.5s, -webkit-transform 0.5s 0.5s;
   transition: transform 0.5s 0.5s, opacity 0.2s 0.5s;
@@ -227,32 +239,41 @@ svg {
   will-change: transform, opacity;
   -webkit-transform: translate3d(-20%, 0, 0);
           transform: translate3d(-20%, 0, 0);
+  */
   opacity: 0;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE  
   .slide__overlay {
     display: none;
   }
+  */
 }
 .slide__overlay path {
   opacity: 0.8;
 }
 .slide__text {
   position: absolute;
-  width: 25%;
-  bottom: 15%;
+  /* width: 25%; OLD */
+  width: 80%; /* NEW CAUSES THE APP ICONS TO NOT TOUCH THE RIGHT HAND SIDE OF THE SLIDE */
+  /* bottom: 15%; OLD */
+  top: 10%; /* NEW */
   left: 12%;
+  right: 12%; /* NEW */
   color: #fff;
-  -webkit-transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
-  transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
-  transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
-  transition: transform 0.5s 0.8s, opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
-  will-change: transform, opacity;
+  /* TEMP COMMENTED OUT: THIS IS THE PART THAT ANIMATED THE TEXT COMING IN, WHICH WE DON'T WANT */
+  /*-webkit-transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s; THIS CHANGES THE ELEMENT'S OPACITY AND SLIDES DOWN, WHICH WE DON'T WANT */
+  /* transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s; THIS CHANGES THE ELEMENT'S OPACITY AND SLIDES DOWN, WHICH WE DON'T WANT */
+  /* transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; THIS CHANGES THE ELEMENT'S OPACITY AND SLIDES DOWN, WHICH WE DON'T WANT */
+  /* transition: transform 0.5s 0.8s, opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s; THIS CHANGES THE ELEMENT'S OPACITY AND SLIDES DOWN, WHICH WE DON'T WANT */
+  /* will-change: transform, opacity; THIS CHANGES THE ELEMENT'S OPACITY AND SLIDES DOWN, WHICH WE DON'T WANT */
+  will-change: transform;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   opacity: 0;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE  
   .slide__text {
     left: 0;
     bottom: 0;
@@ -260,24 +281,35 @@ svg {
     height: 20rem;
     text-align: center;
     -webkit-transform: translateY(50%);
-            transform: translateY(50%);
+            transform: translateY(50%); */
+    /* THIS CHANGES THE ELEMENT'S OPACITY, WHICH WE DON'T WANT
     -webkit-transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
     transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
     transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
     transition: transform 0.5s 0.5s, opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+    */
+  /*  
+    -webkit-transition: -webkit-transform 0.5s 0.5s;
+    transition: -webkit-transform 0.5s 0.5s;
+    transition: transform 0.5s 0.5s;
+    transition: transform 0.5s 0.5s, -webkit-transform 0.5s 0.5s;    
     padding: 0 1rem;
   }
+  */
 }
 .slide__text-heading {
-  font-family: "Polar", Helvetica, Arial, sans-serif;
+  /* font-family: "Polar", Helvetica, Arial, sans-serif; WE DON'T WANT TO USE THE FONT 'Polar' */
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 5rem;
   margin-bottom: 2rem;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE  
   .slide__text-heading {
     line-height: 20rem;
     font-size: 3.5rem;
   }
+  */
 }
 .slide__text-desc {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -285,9 +317,11 @@ svg {
   margin-bottom: 1.5rem;
 }
 @media (max-width: 991px) {
+  /* WE CAN CHOSE SMALLER APPI ICONS HERE
   .slide__text-desc {
     display: none;
   }
+  */
 }
 .slide__text-link {
   z-index: 5;
@@ -301,9 +335,11 @@ svg {
           perspective: 1000px;
 }
 @media (max-width: 991px) {
+    /* WE CAN CHOSE SMALLER APPI ICONS HERE
   .slide__text-link {
     display: none;
   }
+  */
 }
 .slide__text-link:before {
   z-index: -1;
@@ -314,6 +350,7 @@ svg {
   width: 100%;
   height: 100%;
   background: #000;
+  /* TEMP COMMENTED OUT   ----- THIS IS BETTER NOT ACTIVATED, COMMENTED OUT IT ALLOWS LINK TO BE USEABLE
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
   -webkit-transform: rotateX(-85deg);
@@ -323,6 +360,7 @@ svg {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   will-change: transform;
+  */
 }
 .slide__text-link:hover:before {
   -webkit-transform: rotateX(0);

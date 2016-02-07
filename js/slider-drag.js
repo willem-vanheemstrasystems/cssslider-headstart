@@ -32,11 +32,11 @@ $(document).ready(function() {
     autoSlideTimeout = setTimeout(function() {
       curSlide++;
       if (curSlide > numOfSlides) curSlide = 0;
-      changeSlides();
+      /* changeSlides(); /* TEMP COMMENTED OUT */
     }, autoSlideDelay);
   };
   
-  autoSlide();
+  /* autoSlide(); /* TEMP COMMENTED OUT */
   
   function changeSlides(instant) {
     if (!instant) {
@@ -46,10 +46,13 @@ $(document).ready(function() {
       $slider.css("top");
       $(".slide").removeClass("active");
       $(".slide-"+curSlide).addClass("active");
+    /*
       setTimeout(function() {
         $slider.removeClass("animating");
         animating = false;
       }, animTime);
+    */
+
     }
     window.clearTimeout(autoSlideTimeout);
     $(".slider-pagi__elem").removeClass("active");

@@ -46,15 +46,16 @@ main {
 }
 
 .homescreen {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform-origin: 50% 50%;
-  opacity: .95;
+  /*width: 100%; /* TEMP COMMENTED OUT */
+  /*height: 100%; /* TEMP COMMENTED OUT */
+  /*position: absolute; /* TEMP COMMENTED OUT */
+  /*-webkit-transform-origin: 50% 50%; /* TEMP COMMENTED OUT */
+  /*opacity: .95; /* TEMP COMMENTED OUT */
   /*background-image: url('../images/fish.jpg');*/
-  background-image: url('../images/NSTexturedFullScreenBackgroundColor.png');
+  /*background-image: url('../images/NSTexturedFullScreenBackgroundColor.png'); /* TEMP COMMENTED OUT */
   /*background-repeat: no-repeat;*/ 
-  background-repeat: repeat;
+  /*background-repeat: repeat; /* TEMP COMMENTED OUT */
+  /*border: 1px solid red; FOR TESTING ONLY */
 }
 
 .homescreen figure {
